@@ -1,9 +1,5 @@
 import { Routers } from './Routers/routers';
 
-const App = () => {
-  return(
-    // Minhas rotas
-    <Routers />
-  );
-}
+const App = () => <Routers />
+
 export default App;
