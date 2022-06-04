@@ -33,9 +33,6 @@ export const Register = () => {
     const [show, setShow] = useState(false);
     let navigate = useNavigate();
 
-    const showArea = () => {
-        setShow(true);
-    }
     const backPage = () => {
         navigate('/home');
     }
@@ -59,6 +56,7 @@ export const Register = () => {
             fieldSus,
             fieldVicios,
         )
+        setShow(true);
     }
 
     
