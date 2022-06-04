@@ -7,6 +7,27 @@ import { useNavigate } from 'react-router-dom';
 
 export const Register = () => {
 
+    // Info pessoais
+    const [fieldName, setFieldName] = useState('');
+    const [fieldCpf, setFieldCpf] = useState('');
+    const [fieldRg, setFieldRg] = useState('');
+    const [fieldSus, setFieldSus] = useState('');
+    const [fieldCertNasc, setFieldCertNasc] = useState('');
+    // Info Endereço
+    const [fieldLog, setFieldLog] = useState('');
+    const [fieldState, setFieldState] = useState('');
+    const [fieldCity, setFieldCity] = useState('');
+    // Info Extras
+    const [fieldVicios, setFieldVicios] = useState('');
+    const [fieldEnf, setFieldEnf] = useState('');
+    const [fieldPreso, setFieldPreso] = useState('');
+    const [fieldArtigo, setFieldArtigo] = useState('');
+    const [fieldProcess, setFieldProcess] = useState('');
+    // Info dos pais(responsaveis)
+    const [fieldNameMother, setFieldNameMother] = useState('');
+    const [fieldNameFather, setFieldNameFather] = useState('');
+    const [fieldPhone, setFieldNamePhone] = useState('');
+
     const [show, setShow] = useState(false);
     let navigate = useNavigate();
 
@@ -16,6 +37,8 @@ export const Register = () => {
     const backPage = () => {
         navigate('/home');
     }
+
+    
 
     return(
         <div>

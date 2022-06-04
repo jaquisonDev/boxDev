@@ -6,6 +6,7 @@ export const Validation = {
         e.preventDefault();
     },
 
+    // Validações da página login
     fieldsLogin: (email: string, password: string) => {
         // ---------------Regex
         // Email
@@ -17,5 +18,7 @@ export const Validation = {
         let fieldPass = validPass.test(password);
 
         return {fieldEmail, fieldPass};
-    }
+    },
+
+    // 
 }
