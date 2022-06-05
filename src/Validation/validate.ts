@@ -67,7 +67,7 @@ export const Validation = {
             console.log(`Estado: ${validStates}`);
 
             // Validando a cidade
-            let citys = /^([A-zÀ-ú\s]{2,})$/gm;
+            let citys = /^([A-zÀ-ú\s]{2,})$/g;
             let validCity = states.test(city);
             console.log(`Cidade: ${validCity}`);
         },
@@ -77,7 +77,7 @@ export const Validation = {
             let validVicio = vicios.test(vicio)
             console.log(`Vicio: ${validVicio}`);
 
-            let enferm = /^([A-zÀ-ú])$/gm;
+            let enferm = /^([A-zÀ-ú]{2,})$/gm;
             let validEnf = enferm.test(enf);
             console.log(`Enfermidade: ${enf}`);
 
@@ -85,7 +85,7 @@ export const Validation = {
             let validPres = pres.test(preso);
             console.log(`Preso: ${validPres}`);
             
-            let dis = /^([A-zÀ-ú])$/gm;
+            let dis = /^([A-zÀ-ú]{2,})$/gm;
             let validDis = dis.test(preso);
             console.log(`Disposto: ${validDis}`);
 
@@ -105,7 +105,7 @@ export const Validation = {
             let validName = nameM.test(nameMother);
             console.log(`Processo: ${validName}`);
 
-            let nameF = /^([A-zÀ-ú])$/gm;
+            let nameF = /^([A-zÀ-ú]{2,})$/gm;
             let validNameF = nameM.test(nameFather);
             console.log(`Processo: ${validNameF}`);
         }
