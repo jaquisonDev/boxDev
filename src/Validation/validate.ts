@@ -57,17 +57,17 @@ export const Validation = {
         },
         infoAddress: (address: string, state: string, city: string) => {
             // Validando o endereço
-            let add = /^([A-z0-9\s\,\-]{2,})$/gm;
+            let add = /^([A-zÀ-ú0-9\s\,\-]{2,})$/gm;
             let validAdd = add.test(address);
             console.log(`Endereço: ${validAdd}`);
 
             // Validando o estado
-            let states = /^([A-z\s]{2,})$/gm;
+            let states = /^([A-zÀ-ú\s]{2,})$/gm;
             let validStates = states.test(state);
             console.log(`Estado: ${validStates}`);
 
             // Validando a cidade
-            let citys = /^([A-z\s]{2,})$/gm;
+            let citys = /^([A-zÀ-ú\s]{2,})$/gm;
             let validCity = states.test(city);
             console.log(`Cidade: ${validCity}`);
         },

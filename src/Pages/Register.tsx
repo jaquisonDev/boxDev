@@ -4,6 +4,7 @@ import home from '../assets/home.png';
 import { useState } from 'react';
 import check from '../assets/check.png';
 import { useNavigate } from 'react-router-dom';
+import { Validation } from '../Validation/validate';
 
 export const Register = () => {
 
@@ -37,26 +38,34 @@ export const Register = () => {
         navigate('/home');
     }
     const dataUsers = () => {
-        console.log(
+        Validation.fieldsRegisters.infoPessoais(
             fieldName,
-            fieldArtigo,
-            fieldCertNasc,
-            fieldCity,
             fieldCpf,
+            fieldRg,
+            fieldSus,
+            fieldCertNasc,
+            fieldStateCivil
+        );
+        Validation.fieldsRegisters.infoAddress(
+            fieldCity,
+            fieldState,
+            fieldLog
+        );
+        Validation.fieldsRegisters.infoExtras(
             fieldDisp,
-            fieldLog,
+            fieldArtigo,
+            fieldEnf,
+            fieldPreso,
+            fieldProcess,
+            fieldVicios
+        );
+        Validation.fieldsRegisters.infoResp(
             fieldNameFather,
             fieldNameMother,
-            fieldPhone,
-            fieldProcess,
-            fieldPreso,
-            fieldRg,
-            fieldState,
-            fieldStateCivil,
-            fieldSus,
-            fieldVicios,
-        )
-        setShow(true);
+            fieldPhone
+        );
+        
+        // setShow(true);
     }
 
     
@@ -83,7 +92,8 @@ export const Register = () => {
                     <C.LinkToBackHome to='/home'>
                         <img src={home} alt="" />
                     </C.LinkToBackHome>
-                    <C.FormRegister>
+
+                    <C.FormRegister onSubmit={Validation.submitForm}>
                         <div className='info-p'>
                             <h2>Informações Pessoais</h2>
 
