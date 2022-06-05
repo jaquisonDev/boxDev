@@ -55,6 +55,9 @@ export const Validation = {
             let certNas = /([0-9]{11})/gm;
             let validCertNas = certNas.test(certNasc);
             console.log(`Certidão: ${validCertNas}`);
+
+            // Retorno das informações em booleano
+            return {validName, validStateC, validCpf, validRg, validCartSus, validCertNas};
         },
         infoAddress: (address: string, state: string, city: string) => {
             // Validando o endereço
@@ -71,6 +74,9 @@ export const Validation = {
             let citys = /^([A-zÀ-ú\s]{2,})$/g;
             let validCity = citys.test(city);
             console.log(`Cidade: ${validCity}`);
+
+            // Retorno das informações em booleano
+            return {validAdd, validStates, validCity};
         },
         infoExtras: (vicio: string, enf: string, preso: string, disp: string,  article: string, process: string) => {
             // Validação de strings
@@ -99,12 +105,15 @@ export const Validation = {
             let validProces = proces.test(article);
             console.log(`Processo: ${validProces}`);
 
+            // Retorno das informações em booleano
+            return {validVicio, validEnf, validPres, validDis, validArt, validProces};
+
         },
         infoResp: (nameMother: string, nameFather: string, phone: string) => {
             // Validando info dos responsaveis
             let nameM = /^([A-zÀ-ú\s]{2,})$/gm;
-            let validName = nameM.test(nameMother);
-            console.log(`Nome da mãe: ${validName}`);
+            let validNameM = nameM.test(nameMother);
+            console.log(`Nome da mãe: ${validNameM}`);
 
             let nameF = /^([A-zÀ-ú]{2,})$/gm;
             let validNameF = nameF.test(nameFather);
@@ -113,6 +122,9 @@ export const Validation = {
             let phones = /^([0-9\-]{9})$/g;
             let validPhone = phones.test(phone);
             console.log(`Telefone: ${validPhone}`);
+
+            // Retorno das informações em booleano
+            return {validNameF, validNameM, validPhone};
         }
     }
 }
