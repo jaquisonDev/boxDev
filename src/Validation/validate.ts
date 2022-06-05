@@ -30,7 +30,7 @@ export const Validation = {
             console.log(`Nome: ${validName}`); //Debugando
 
             // Estado Civil
-            let stateC = /([A-z]{8})/gm;
+            let stateC = /^([A-z]{2,})$/gm;
             let validStateC = stateC.test(stateCivil);
             console.log(`Estado Civil: ${validStateC}`); //Debugando
 
@@ -46,7 +46,7 @@ export const Validation = {
             console.log(`Rg: ${validRg}`);
 
             // SUS
-            let cartSus = /([0-9]{15})/gm;
+            let cartSus = /^([0-9]{15})$/gm;
             let validCartSus = cartSus.test(sus);
             console.log(`Cartão sus: ${validCartSus}`);
 
@@ -68,7 +68,7 @@ export const Validation = {
 
             // Validando a cidade
             let citys = /^([A-zÀ-ú\s]{2,})$/g;
-            let validCity = states.test(city);
+            let validCity = citys.test(city);
             console.log(`Cidade: ${validCity}`);
         },
         infoExtras: (vicio: string, enf: string, preso: string, disp: string,  article: string, process: string) => {
@@ -79,9 +79,9 @@ export const Validation = {
 
             let enferm = /^([A-zÀ-ú]{2,})$/gm;
             let validEnf = enferm.test(enf);
-            console.log(`Enfermidade: ${enf}`);
+            console.log(`Enfermidade: ${validEnf}`);
 
-            let pres = /^([A-zÀ-ú])$/gm;
+            let pres = /^([A-zÀ-ú]{2,})$/gm;
             let validPres = pres.test(preso);
             console.log(`Preso: ${validPres}`);
             
@@ -103,11 +103,15 @@ export const Validation = {
             // Validando info dos responsaveis
             let nameM = /^([A-zÀ-ú\s]{2,})$/gm;
             let validName = nameM.test(nameMother);
-            console.log(`Processo: ${validName}`);
+            console.log(`Nome da mãe: ${validName}`);
 
             let nameF = /^([A-zÀ-ú]{2,})$/gm;
-            let validNameF = nameM.test(nameFather);
-            console.log(`Processo: ${validNameF}`);
+            let validNameF = nameF.test(nameFather);
+            console.log(`Nome do pai: ${validNameF}`);
+
+            let phones = /^([0-9\-]{9})$/g;
+            let validPhone = phones.test(phone);
+            console.log(`Telefone: ${validPhone}`);
         }
     }
 }
