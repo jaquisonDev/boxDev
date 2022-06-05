@@ -17,6 +17,7 @@ export const Validation = {
         let validPass = /([A-z0-9\!\@\#\$\%\&\*]{8,})/gm;
         let fieldPass = validPass.test(password);
 
+        // retornando os valores para controle
         return {fieldEmail, fieldPass};
     },
 
@@ -57,12 +58,12 @@ export const Validation = {
         },
         infoAddress: (address: string, state: string, city: string) => {
             // Validando o endereço
-            let add = /^([A-zÀ-ú0-9\s\,\-]{2,})$/gm;
+            let add = /^([A-zÀ-ú0-9\s\,\-]{2,})$/g;
             let validAdd = add.test(address);
             console.log(`Endereço: ${validAdd}`);
 
             // Validando o estado
-            let states = /^([A-zÀ-ú\s]{2,})$/gm;
+            let states = /^([A-zÀ-ú\s]{2,})$/g;
             let validStates = states.test(state);
             console.log(`Estado: ${validStates}`);
 

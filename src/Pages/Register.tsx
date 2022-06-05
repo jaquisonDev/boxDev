@@ -47,21 +47,21 @@ export const Register = () => {
             fieldStateCivil
         );
         Validation.fieldsRegisters.infoAddress(
-            fieldCity,
+            fieldLog,
             fieldState,
-            fieldLog
+            fieldCity
         );
         Validation.fieldsRegisters.infoExtras(
-            fieldDisp,
-            fieldArtigo,
+            fieldVicios,
             fieldEnf,
             fieldPreso,
+            fieldDisp,
+            fieldArtigo,
             fieldProcess,
-            fieldVicios
         );
         Validation.fieldsRegisters.infoResp(
-            fieldNameFather,
             fieldNameMother,
+            fieldNameFather,
             fieldPhone
         );
         
