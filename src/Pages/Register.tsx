@@ -31,6 +31,8 @@ export const Register = () => {
     const [fieldNameFather, setFieldNameFather] = useState('');
     const [fieldPhone, setFieldPhone] = useState('');
 
+    const [msgError, setMsgError] = useState<boolean>();
+
     const [show, setShow] = useState(false);
     let navigate = useNavigate();
 
@@ -38,7 +40,7 @@ export const Register = () => {
         navigate('/home');
     }
     const dataUsers = () => {
-        Validation.fieldsRegisters.infoPessoais(
+       let infoPessoais = Validation.fieldsRegisters.infoPessoais(
             fieldName,
             fieldCpf,
             fieldRg,
@@ -46,12 +48,12 @@ export const Register = () => {
             fieldCertNasc,
             fieldStateCivil
         );
-        Validation.fieldsRegisters.infoAddress(
+        let infoAdd = Validation.fieldsRegisters.infoAddress(
             fieldLog,
             fieldState,
             fieldCity
         );
-        Validation.fieldsRegisters.infoExtras(
+        let infoEx = Validation.fieldsRegisters.infoExtras(
             fieldVicios,
             fieldEnf,
             fieldPreso,
@@ -59,12 +61,84 @@ export const Register = () => {
             fieldArtigo,
             fieldProcess,
         );
-        Validation.fieldsRegisters.infoResp(
+        let infoR = Validation.fieldsRegisters.infoResp(
             fieldNameMother,
             fieldNameFather,
             fieldPhone
         );
+
+        // Verificando informações pessoais
+        if(infoPessoais.validName) {
+            console.log("Nome válido");
+        }else if(infoPessoais.validCpf) {
+            console.log("Cpf válido");
+        }else if(infoPessoais.validRg) {
+            console.log("Rg válido");
+        }else if(infoPessoais.validCartSus) {
+            console.log("Cartão Sus válido");
+        }else if(infoPessoais.validCpf) {
+            console.log("Cpf válido");
+        }else if(infoPessoais.validCertNas) {
+            console.log("Certidão de Nascimento válida");
+        }else if(infoPessoais.validStateC) {
+            console.log("Estado Civil válido");
+        }else {
+            console.log("Existe alguma informação incorreta. Verifique por favor!")
+            setMsgError(false);
+            return;
+        }
+        console.log(infoPessoais.validName);
         
+        // Verificando informações do endereço
+        if(infoAdd.validAdd) {
+            console.log("Endereço valido");
+        }else if(infoAdd.validCity) {
+            console.log("Cidade válida");
+        }else if(infoAdd.validStates) {
+            console.log("Estado válido");
+        }else {
+            console.log("Alguma informação está incorreta. Verifique por favor!!");
+            setMsgError(false);
+        }
+
+        // Validando informações Extras
+        if(infoEx.validVicio) {
+            console.log("Informação de vicio validado");
+            return;
+        }else if(infoEx.validEnf) {
+            console.log("Informação de enfermidade validado");
+            return;
+        }else if(infoEx.validPres) {
+            console.log("Informação de enfermidade validado");
+            return;
+        }else if(infoEx.validArt) {
+            console.log("Informação de Artigo valida");
+            return;
+        }else if(infoEx.validProces) {
+            console.log("Informação de processo válida");
+            return;
+        }else if(infoEx.validDis) {
+            console.log("Infromação de Disposto válida");
+            return;
+        }else {
+            console.log("Alguma informação está incorreta. Verifique por favor!!");
+            setMsgError(false);
+            return ;
+        }
+
+        // Validando as informações dos responsáveis
+        if(infoR.validNameM) {
+            console.log("Nome da mãe válido");
+        }else if(infoR.validNameF) {
+            console.log("Nome do pai válido");
+        }else if(infoR.validPhone) {
+            console.log("Número de telefone válido");
+        }else {
+            console.log("Alguma informação está incorreta. Verifique por favor!!");
+            setMsgError(false);
+            return;
+        }
+    
         // setShow(true);
     }
 
