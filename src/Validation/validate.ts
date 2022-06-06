@@ -52,7 +52,7 @@ export const Validation = {
             // console.log(`Cartão sus: ${validCartSus}`);
 
             // CERTIDÃO DE NASC.
-            let certNas = /([0-9]{11})/gm;
+            let certNas = /([0-9]{2,})/gm;
             let validCertNas = certNas.test(certNasc);
             // console.log(`Certidão: ${validCertNas}`);
 

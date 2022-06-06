@@ -85,6 +85,7 @@ export const AreaLogin = styled.div`
 // Formulário
 export const Formulary = styled.form`
     display: flex;
+    align-items: center;
     flex-direction: column;
 `;
 

@@ -70,76 +70,135 @@ export const Register = () => {
         // Verificando informações pessoais
         if(infoPessoais.validName) {
             console.log("Nome válido");
-        }else if(infoPessoais.validCpf) {
-            console.log("Cpf válido");
-        }else if(infoPessoais.validRg) {
-            console.log("Rg válido");
-        }else if(infoPessoais.validCartSus) {
-            console.log("Cartão Sus válido");
-        }else if(infoPessoais.validCpf) {
-            console.log("Cpf válido");
-        }else if(infoPessoais.validCertNas) {
-            console.log("Certidão de Nascimento válida");
-        }else if(infoPessoais.validStateC) {
-            console.log("Estado Civil válido");
         }else {
-            console.log("Existe alguma informação incorreta. Verifique por favor!")
-            setMsgError(false);
+            console.log("Nome inválido!...Verifique!");
+            return;
+        }   
+
+        if(infoPessoais.validCpf) {
+            console.log("Cpf válido");
+        }else {
+            console.log("Cpf inválido!...Verifique!");
             return;
         }
-        console.log(infoPessoais.validName);
+
+        if(infoPessoais.validRg) {
+            console.log("Rg válido");
+        }else {
+            console.log("Rg inválido!...Verifique!");
+            return;
+        }
+
+        if(infoPessoais.validCartSus) {
+            console.log("Sus válido");
+        }else {
+            console.log("N° Sus inválido!...Verifique!");
+            return;
+        }
         
+        // if(infoPessoais.validCertNas) {
+        //     console.log("Cert. Nascimento válido");
+        // }else {
+        //     console.log("Cert. Nasc. inválido!...Verifique!");
+        //     return;
+        // }
+        
+        if(infoPessoais.validStateC) {
+            console.log("Estado Civil válido");
+        }else {
+            console.log("Estado Civil inválido!...Verifique!");
+            return;
+        }
+       
+    
+    
         // Verificando informações do endereço
         if(infoAdd.validAdd) {
             console.log("Endereço valido");
-        }else if(infoAdd.validCity) {
+        }else {
+            console.log("Endereço inválido!...Verifique!");
+            return;
+        } 
+        
+        if(infoAdd.validCity) {
             console.log("Cidade válida");
-        }else if(infoAdd.validStates) {
+        }else {
+            console.log("Cidade inválida!...Verifique!");
+            return;
+        } 
+        
+        if(infoAdd.validStates) {
             console.log("Estado válido");
         }else {
             console.log("Alguma informação está incorreta. Verifique por favor!!");
-            setMsgError(false);
         }
 
         // Validando informações Extras
         if(infoEx.validVicio) {
             console.log("Informação de vicio validado");
-            return;
-        }else if(infoEx.validEnf) {
-            console.log("Informação de enfermidade validado");
-            return;
-        }else if(infoEx.validPres) {
-            console.log("Informação de enfermidade validado");
-            return;
-        }else if(infoEx.validArt) {
-            console.log("Informação de Artigo valida");
-            return;
-        }else if(infoEx.validProces) {
-            console.log("Informação de processo válida");
-            return;
-        }else if(infoEx.validDis) {
-            console.log("Infromação de Disposto válida");
-            return;
         }else {
-            console.log("Alguma informação está incorreta. Verifique por favor!!");
-            setMsgError(false);
-            return ;
+            console.log("Vicio inválido!...Verifique!");
+            return;
+        } 
+        
+        if(infoEx.validEnf) {
+            console.log("Informação de enfermidade validado");
+        }else {
+            console.log("Enfermidade inválida!...Verifique!");
+            return;
+        } 
+        
+        if(infoEx.validPres) {
+            console.log("Informação de enfermidade validado");
+        }else {
+            console.log("Preso inválido!...Verifique!");
+            return;
+        } 
+        
+        if(infoEx.validArt) {
+            console.log("Informação de Artigo valida");
+        }else {
+            console.log("Artigo inválido!...Verifique!");
+            return;
+        }
+        
+        if(infoEx.validProces) {
+            console.log("Informação de processo válida");
+        }else {
+            console.log("Processo inválido!...Verifique!");
+            return;
+        } 
+        
+        if(infoEx.validDis) {
+            console.log("Infromação de Disposto válida");
+        }else {
+            console.log("Disposto inválido!...Verifique!");
+            return;
         }
 
         // Validando as informações dos responsáveis
         if(infoR.validNameM) {
             console.log("Nome da mãe válido");
-        }else if(infoR.validNameF) {
+        }else {
+            console.log("Nome da mãe inválido!...Verifique!");
+            return;
+        } 
+        
+        if(infoR.validNameF) {
             console.log("Nome do pai válido");
-        }else if(infoR.validPhone) {
+        }else {
+            console.log("Nome do pai inválido!...Verifique!");
+            return;
+        } 
+        
+        if(infoR.validPhone) {
             console.log("Número de telefone válido");
         }else {
-            console.log("Alguma informação está incorreta. Verifique por favor!!");
-            setMsgError(false);
+            console.log("Telefone inválido!...Verifique!");
             return;
         }
     
-        // setShow(true);
+        setShow(true);
     }
 
     
@@ -179,19 +238,19 @@ export const Register = () => {
                             />
                             <C.InputsRegister 
                                 type="text" 
-                                placeholder='Cpf...'
+                                placeholder='Cpf...(11) digitos'
                                 value={fieldCpf}
                                 onChange={e => setFieldCpf(e.target.value)}
                             />
                             <C.InputsRegister 
                                 type="text" 
-                                placeholder='Rg...'
+                                placeholder='Rg...(10) digitos'
                                 value={fieldRg}
                                 onChange={e => setFieldRg(e.target.value)}
                             />
                             <C.InputsRegister 
                                 type="text" 
-                                placeholder='Cart. Sus...'
+                                placeholder='Cart. Sus...(15) digitos'
                                 value={fieldSus}
                                 onChange={e => setFieldSus(e.target.value)}
                             />    
@@ -284,7 +343,7 @@ export const Register = () => {
                             />
                             <C.InputsRegister 
                                 type="text" 
-                                placeholder='Fone...'
+                                placeholder='Fone...(9) digitos'
                                 value={fieldPhone}
                                 onChange={e => setFieldPhone(e.target.value)}
                             />
