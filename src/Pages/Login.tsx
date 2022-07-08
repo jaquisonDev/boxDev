@@ -47,7 +47,7 @@ export const Login = () => {
                 <C.Formulary onSubmit={Validation.submitForm}>
                     <C.Inputs 
                         type="text" 
-                        placeholder='Nome / email...'
+                        placeholder='email...'
                         value={fieldEmail}
                         onChange={e => setFieldEmail(e.target.value)}
                     />
