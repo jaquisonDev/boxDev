@@ -17,6 +17,22 @@ export const Login = () => {
         if(validation.fieldEmail && validation.fieldPass) {
             navigate('/home');
         }
+
+        if(fieldEmail === "" && fieldPass === "") {
+            alert("Preencha todos os campos!!!");
+            return;
+        }
+
+        if(fieldEmail === "") {
+            alert("Preencha o email!! Não pode ser vazio.");
+            return;
+        }
+
+        if(fieldPass === "") {
+            alert("Preencha à Senha!! Não pode ser vazio.");
+            return;
+        }
+
     }
 
     return(
