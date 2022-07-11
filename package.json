@@ -2,7 +2,7 @@
   "name": "projetosr",
   "private": false,
   "version": "0.0.0",
-  "homepage": "https://jaquisonDev.github.io/projeto-s/",
+  "homepage": "https://jaquisonDev.github.io/projetosr/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
