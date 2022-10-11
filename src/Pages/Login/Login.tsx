@@ -1,7 +1,7 @@
-import * as C from '../Component/Components';
+import * as C from '../../Component/Components';
 import logo from '../assets/Logo S.png';
 import { useNavigate } from 'react-router-dom';
-import { Validation } from '../Validation/validate';
+import { Validation } from '../../Validation/validate';
 import { useState } from 'react';
 
 export const Login = () => {

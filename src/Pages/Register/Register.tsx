@@ -1,10 +1,10 @@
-import * as C from '../Component/Components';
+import * as C from '../../Component/Components';
 import logo2 from '../assets/Logo SS.png';
 import home from '../assets/home.png';
 import { useState } from 'react';
 import check from '../assets/check.png';
 import { useNavigate } from 'react-router-dom';
-import { Validation } from '../Validation/validate';
+import { Validation } from '../../Validation/validate';
 
 export const Register = () => {
 

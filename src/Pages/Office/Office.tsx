@@ -1,10 +1,10 @@
-import * as C from '../Component/Components';
+import * as C from '../../Component/Components';
 import logo2 from '../assets/Logo SS.png';
 import home from '../assets/Home.png';
-import iconIg from '../assets/Igreja.png';
+import iconEsc2 from '../assets/esc2.png';
 import { useState } from 'react';
 
-export const Church = () => {
+export const Office = () => {
 
     const [showMenuOption, setShowMenuOption] = useState<boolean>(false);
 
@@ -55,10 +55,13 @@ export const Church = () => {
                                 <li>
                                     <C.linkItem to='/'>Remover</C.linkItem>
                                 </li>
+                                <li>
+                                    <C.linkItem to='/'>Documentos</C.linkItem>
+                                </li>
                             </ul>
                         </C.menuItems>
                     }
-                    <img src={iconIg} alt="" width={200}/>
+                    <img src={iconEsc2} alt="" width={200}/>
                     <span className='text-logo'>
                         Aqui você tem o controle das empresas (parceiras) cadastradas.
                         Cadastre mais empresas (parceiras) e monitore as já existentes,
@@ -68,11 +71,11 @@ export const Church = () => {
                 
                 <C.FormularyEx onSubmit={e => e.preventDefault()}>
                     <C.Title>
-                        <span className='title'>Igrejas</span>
-                        <img src={iconIg} alt="icone do titulo" width={50}/>
+                        Escritório
+                        <img src={iconEsc2} alt="icone do titulo" width={50}/>
                     </C.Title>
 
-                    <C.Inputs type='text' placeholder='Nome...'/>
+                    <C.Inputs type='text' placeholder='Contribuinte...'/>
                     <C.Inputs type='text' placeholder='Logradouro...'/>
                     <C.Inputs type='text' placeholder='Valor R$...'/>
                     <C.Inputs type='date'/>

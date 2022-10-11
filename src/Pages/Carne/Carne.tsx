@@ -1,10 +1,10 @@
-import * as C from '../Component/Components';
+import * as C from '../../Component/Components';
 import logo2 from '../assets/Logo SS.png';
 import home from '../assets/Home.png';
-import iconEsc2 from '../assets/esc2.png';
+import iconC from '../assets/Carnes.png';
 import { useState } from 'react';
 
-export const Office = () => {
+export const Carne = () => {
 
     const [showMenuOption, setShowMenuOption] = useState<boolean>(false);
 
@@ -15,7 +15,7 @@ export const Office = () => {
     }
     const verifyMenuOption = () => {
         showMenuOption ? setShowMenuOption(false) 
-            : setShowMenuOption(true);
+        : setShowMenuOption(true);
     }
 
     return(
@@ -55,32 +55,29 @@ export const Office = () => {
                                 <li>
                                     <C.linkItem to='/'>Remover</C.linkItem>
                                 </li>
-                                <li>
-                                    <C.linkItem to='/'>Documentos</C.linkItem>
-                                </li>
                             </ul>
                         </C.menuItems>
                     }
-                    <img src={iconEsc2} alt="" width={200}/>
+                    <img src={iconC} alt="" width={200}/>
                     <span className='text-logo'>
-                        Aqui você tem o controle das empresas (parceiras) cadastradas.
-                        Cadastre mais empresas (parceiras) e monitore as já existentes,
+                        Aqui você tem o controle dos Carnês (parceiros) cadastrados.
+                        Cadastre mais carnês (parceiras) e monitore os já existentes,
                         controlando seus fluxos como: cadastrar, atualizar, buscar e excluir.
                     </span>
                 </C.AreaLogo>
                 
                 <C.FormularyEx onSubmit={e => e.preventDefault()}>
                     <C.Title>
-                        Escritório
-                        <img src={iconEsc2} alt="icone do titulo" width={50}/>
+                        Carnês
+                        <img src={iconC} alt="icone do titulo" width={50}/>
                     </C.Title>
 
-                    <C.Inputs type='text' placeholder='Contribuinte...'/>
+                    <C.Inputs type='text' placeholder='Nome...'/>
                     <C.Inputs type='text' placeholder='Logradouro...'/>
+                    <C.Inputs type='text' placeholder='Data contribuição...'/>
                     <C.Inputs type='text' placeholder='Valor R$...'/>
-                    <C.Inputs type='date'/>
 
-                    <C.ButtonDespEx>Cadastrar Empresa</C.ButtonDespEx>
+                    <C.ButtonDespEx>Cadastrar Contrib.</C.ButtonDespEx>
                 </C.FormularyEx>
             </C.ContainerExpenseEx>
         </div>

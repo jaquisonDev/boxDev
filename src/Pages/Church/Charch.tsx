@@ -1,10 +1,10 @@
-import * as C from '../Component/Components';
+import * as C from '../../Component/Components';
 import logo2 from '../assets/Logo SS.png';
 import home from '../assets/Home.png';
-import iconFa from '../assets/family.png';
+import iconIg from '../assets/Igreja.png';
 import { useState } from 'react';
 
-export const Family = () => {
+export const Church = () => {
 
     const [showMenuOption, setShowMenuOption] = useState<boolean>(false);
 
@@ -42,7 +42,7 @@ export const Family = () => {
                 </C.LinkToBackHome>
 
                 <C.AreaLogo secondary>
-                <C.menuLink onClick={showMenu}>Menu de controle</C.menuLink>
+                    <C.menuLink onClick={showMenu}>Menu de controle</C.menuLink>
                     {showMenuOption && 
                         <C.menuItems>
                             <ul>
@@ -58,27 +58,26 @@ export const Family = () => {
                             </ul>
                         </C.menuItems>
                     }
-                    <img src={iconFa} alt="" width={150}/>
+                    <img src={iconIg} alt="" width={200}/>
                     <span className='text-logo'>
                         Aqui você tem o controle das empresas (parceiras) cadastradas.
                         Cadastre mais empresas (parceiras) e monitore as já existentes,
                         controlando seus fluxos como: cadastrar, atualizar, buscar e excluir.
                     </span>
                 </C.AreaLogo>
-
+                
                 <C.FormularyEx onSubmit={e => e.preventDefault()}>
-                    <C.Title className='title'>
-                         Familias
-                         <img src={iconFa} alt="" width={50}/>
+                    <C.Title>
+                        <span className='title'>Igrejas</span>
+                        <img src={iconIg} alt="icone do titulo" width={50}/>
                     </C.Title>
-                    
-                    <C.Inputs type='text' placeholder='Responsável ...'/>
-                    <C.Inputs type='text' placeholder='Telefone...'/>
-                    <C.Inputs type='text' placeholder='Cidade...'/>
+
+                    <C.Inputs type='text' placeholder='Nome...'/>
+                    <C.Inputs type='text' placeholder='Logradouro...'/>
                     <C.Inputs type='text' placeholder='Valor R$...'/>
                     <C.Inputs type='date'/>
 
-                    <C.ButtonPix>Cadastrar Pix</C.ButtonPix>
+                    <C.ButtonDespEx>Cadastrar Empresa</C.ButtonDespEx>
                 </C.FormularyEx>
             </C.ContainerExpenseEx>
         </div>

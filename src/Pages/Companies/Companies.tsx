@@ -1,4 +1,4 @@
-import * as C from '../Component/Components';
+import * as C from '../../Component/Components';
 import logo2 from '../assets/Logo SS.png';
 import home from '../assets/Home.png';
 import iconComp from '../assets/empresa.png';
