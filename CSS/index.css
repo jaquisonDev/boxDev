@@ -1,0 +1,662 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'font-main';
+    src: url('../Fonts/GODOFWAR.TTF');
+}
+
+body {
+    background-image: url('../Images/Mt.olympus.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.area-jogo {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-end;
+
+    margin-left: 400px;
+    margin-top: 170px;
+}
+
+.area-jogo p {
+    width: 740px;
+    font-size: 30px;
+    font-weight: 600;
+    font-style: italic;
+    text-align: justify;
+    background-color: rgba(218, 165, 32, .2);
+    color: darkslategrey;
+}
+
+.area-jogo h1 {
+    margin-bottom: 30px;
+    font-size: 45px;
+    font-family: 'font-main', sans-serif;
+}
+
+.area-jogo .btn-index,
+.area-jogo .btn-regras {
+    margin-top: 30px;
+    padding: 10px 0;
+    background-image: linear-gradient(to right, Goldenrod, Sienna, white);
+    border: 0;
+    border-radius: 5px;
+    font-size: 23px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.area-jogo .btn-regras {
+    padding: 10px 25px;
+}
+
+.area-jogo .btn-index:hover {
+    box-shadow: 0 0 10px 10px Goldenrod;
+    text-shadow: 3px 5px 3px red;
+}
+
+
+
+
+/* ------------------INICIO PAGINA 01----------------------- */
+@font-face {
+    font-family: 'font-main';
+    src: url('../Fonts/GODOFWAR.TTF');
+}
+
+.container-page01 {
+    display: flex;
+}
+
+.container-page01 .area-one {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 20px;
+}
+
+.area-one .title h2 {
+    font-family: 'font-main', sans-serif;
+    font-size: 40px;
+    margin-top: 25px;
+}
+.area-one .area-ask01 {
+    margin-top: 80px;
+}
+
+.area-one .area-ask01 p {
+    font-size: 45px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.area-one .area-answer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.area-one .area-answer span {
+    padding: 8px;
+    font-size: 30px;
+}
+
+select {
+    width: 400px;
+    padding: 0.6rem;
+    font-size: 25px;
+}
+
+.area-one button {
+    padding: 0.8rem 8rem;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    border: 0;
+    cursor: pointer;
+    background-image: linear-gradient(to right, Goldenrod, Sienna, white);
+}
+
+.container-page01 .area-two {
+    flex: 1;
+
+    background-image: url('../Images/imagemp1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    height: 100vh;
+}
+/* ------------------FIM PAGINA 01----------------------- */
+
+
+
+/* ------------------INICIO PAGINA 02----------------------- */
+@font-face {
+    font-family: 'font-main';
+    src: url('../Fonts/GODOFWAR.TTF');
+}
+
+.container-page02 {
+    display: flex;
+}
+
+.container-page02 .area-one-02 {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 20px;
+}
+
+.area-one-02 .title h2 {
+    font-family: 'font-main', sans-serif;
+    font-size: 40px;
+    margin-top: 25px;
+}
+.area-one-02 .area-ask {
+    margin-top: 80px;
+}
+
+.area-one-02 .area-ask-02 p {
+    font-size: 45px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.area-one-02 .area-answer-02 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.area-one-02 .area-answer-02 span {
+    padding: 8px;
+    font-size: 30px;
+}
+
+.active:focus {
+    background-color: blue;
+}
+
+.area-one-02 button {
+    padding: 0.8rem 8rem;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    border: 0;
+    cursor: pointer;
+    background-image: linear-gradient(to right, Goldenrod, Sienna, white);
+}
+
+.container-page02 .area-two-02 {
+    flex: 1;
+
+    background-image: url('../Images/zeus.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    height: 100vh;
+}
+/* -------------------------FIM PAGINA 02----------------- */
+
+
+
+/* ---------------------INICIO PAGINA 03------------------ */
+@font-face {
+    font-family: 'font-main';
+    src: url('../Fonts/GODOFWAR.TTF');
+}
+
+.container-page03 {
+    display: flex;
+}
+
+.container-page03 .area-one-03 {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 20px;
+}
+
+.area-one-03 .title h2 {
+    font-family: 'font-main', sans-serif;
+    font-size: 40px;
+    margin-top: 25px;
+}
+.area-one-03 .area-ask-03 {
+    margin-top: 50px;
+}
+
+.area-one-03 .area-ask-03 p {
+    font-size: 45px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.area-one-03 .area-answer-03 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.area-one-03 .area-answer-03 span {
+    padding: 8px;
+    font-size: 30px;
+}
+
+.active:focus {
+    background-color: blue;
+}
+
+.area-one-03 .btn-03 {
+    padding: 0.8rem 8rem;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    border: 0;
+    cursor: pointer;
+    background-image: linear-gradient(to right, Goldenrod, Sienna, white);
+}
+
+.container-page03 .area-two-03 {
+    flex: 1;
+
+    background-image: url('../Images/Athena.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    height: 100vh;
+}
+/* ---------------------FIM PAGINA 03------------------ */
+
+
+/* ---------------------INICIO PAGINA 04------------------ */
+@font-face {
+    font-family: 'font-main';
+    src: url('../Fonts/GODOFWAR.TTF');
+}
+
+.container-page04 {
+    display: flex;
+}
+
+.container-page04 .area-one-04 {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 20px;
+}
+
+.area-one-04 .title h2 {
+    font-family: 'font-main', sans-serif;
+    font-size: 40px;
+    margin-top: 25px;
+}
+.area-one-04 .area-ask-04 {
+    margin-top: 30px;
+}
+
+.area-one-04 .area-ask-04 p {
+    font-size: 45px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.area-one-04 .area-answer-04 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.area-one-04 .area-answer-04 span {
+    padding: 8px;
+    font-size: 30px;
+}
+
+.area-answer-04 .answer-one-04 p,
+.area-answer-04 .answer-two-04 p,
+.area-answer-04 .answer-three-04 p {
+    background-color: goldenrod;
+    padding: 0.8rem 12rem;
+    border-radius: 15px 5px;
+    letter-spacing: 9px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.active:focus {
+    background-color: blue;
+}
+
+.area-one-04 button {
+    padding: 0.8rem 8rem;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    border: 0;
+    cursor: pointer;
+    background-image: linear-gradient(to right, Goldenrod, Sienna, white);
+}
+
+.container-page04 .area-two-04 {
+    flex: 1;
+
+    background-image: url('../Images/grecia.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    height: 100vh;
+}
+/* ---------------------FIM PAGINA 04------------------ */
+
+
+/* ---------------------INICIO PAGINA 05------------------ */
+@font-face {
+    font-family: 'font-main';
+    src: url('../Fonts/GODOFWAR.TTF');
+}
+
+.container-page05 {
+    display: flex;
+}
+
+.container-page05 .area-one-05 {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 20px;
+}
+
+.area-one-05 .title h2 {
+    font-family: 'font-main', sans-serif;
+    font-size: 40px;
+    margin-top: 25px;
+}
+.area-one-05 .area-ask-05 {
+    margin-top: 30px;
+}
+
+.area-one-05 .area-ask-05 p {
+    font-size: 45px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.area-one-05 .area-answer-05 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.area-one-05 .area-answer-05 span {
+    padding: 8px;
+    font-size: 30px;
+}
+
+.area-answer-05 .answer-one-05 p,
+.area-answer-05 .answer-two-05 p,
+.area-answer-05 .answer-three-05 p {
+    background-color: goldenrod;
+    padding: 0.8rem 12rem;
+    border-radius: 15px 5px;
+    letter-spacing: 9px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.active:focus {
+    background-color: blue;
+}
+
+.area-one-05 button {
+    padding: 0.8rem 8rem;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    border: 0;
+    cursor: pointer;
+    background-image: linear-gradient(to right, Goldenrod, Sienna, white);
+}
+
+.container-page05 .area-two-05 {
+    flex: 1;
+
+    background-image: url('../Images/ares.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    height: 100vh;
+}
+/* ---------------------INICIO PAGINA 05------------------ */
+
+
+/* ---------------------INICIO PAGINA 06------------------ */
+@font-face {
+    font-family: 'font-main';
+    src: url('../Fonts/GODOFWAR.TTF');
+}
+
+.container-page06 {
+    display: flex;
+}
+
+.container-page06 .area-one-06 {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 20px;
+}
+
+.area-one-06 .title h2 {
+    font-family: 'font-main', sans-serif;
+    font-size: 40px;
+    margin-top: 25px;
+}
+.area-one-06 .area-ask-06 {
+    margin-top: 30px;
+}
+
+.area-one-06 .area-ask-06 p {
+    font-size: 35px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.area-one-06 .area-answer-06 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.area-one-06 .area-answer-06 span {
+    padding: 8px;
+    font-size: 30px;
+}
+
+.area-answer-06 .answer-one-06 p,
+.area-answer-06 .answer-two-06 p,
+.area-answer-06 .answer-three-06 p {
+    background-color: goldenrod;
+    padding: 0.8rem 12rem;
+    border-radius: 15px 5px;
+    letter-spacing: 9px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.active:focus {
+    background-color: blue;
+}
+
+.area-one-06 button {
+    padding: 0.8rem 8rem;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    border: 0;
+    cursor: pointer;
+    background-image: linear-gradient(to right, Goldenrod, Sienna, white);
+}
+
+.container-page06 .area-two-06 {
+    flex: 1;
+
+    background-image: url('../Images/deuses.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    height: 100vh;
+}
+/* ---------------------FIM PAGINA 06------------------ */
+
+
+
+/* ---------------------INICIO PAGINA 07------------------ */
+@font-face {
+    font-family: 'font-main';
+    src: url('../Fonts/GODOFWAR.TTF');
+}
+
+.container-page07 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.area-jogo-07 {
+    display: flex;
+}
+
+.area-jogo-07 .area-response-07 {
+    width: 740px;
+    font-size: 30px;
+    font-weight: 600;
+    font-style: italic;
+    text-align: justify;
+    background-color: rgba(0, 0, 0, .7);
+    color: darkslategrey;
+    padding: 0 20px;
+    margin: 0 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.area-jogo-07 .area-response-07 span {
+    padding: 10px 0;
+    color: #fff;
+}
+
+.area-jogo-07 h1 {
+    font-size: 45px;
+    font-family: 'font-main', sans-serif;
+}
+
+.area-jogo-07 button {
+    padding: 10px;
+    background-image: linear-gradient(to right, Goldenrod, Sienna, white);
+    border: 0;
+    border-radius: 5px;
+    font-size: 23px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    height: 50px;
+    margin-top: 10%;
+}
+
+.area-jogo-07 button:hover {
+    box-shadow: 0 0 10px 10px Goldenrod;
+    text-shadow: 3px 5px 3px red;
+}
+
+.acertos-07 {
+    display: flex;
+    flex-direction: column;
+}
+
+.acertos-07 .n1 p,
+.acertos-07 .n2 p,
+.acertos-07 .n3 p,
+.acertos-07 .n4 p,
+.acertos-07 .n5 p,
+.acertos-07 .n6 p {
+    display: inline-block;
+    color: #FFD700;
+}
+
+.acertos-07 .n1 ,
+.acertos-07 .n2 ,
+.acertos-07 .n3 ,
+.acertos-07 .n4 ,
+.acertos-07 .n5 ,
+.acertos-07 .n6 {
+    color: #48D1CC;
+}
+
+.outra-07 {
+    border-top: 2px solid #fff;
+}
+
+.outra-08 {    
+    border-bottom: 2px solid #fff;
+}
+
+.area-response-07 .pontuacao {
+    border-bottom: 2px solid #fff;
+    color: #7CFC00;
+    font-weight: bold;
+}
+/* ---------------------FIM PAGINA 07------------------ */
